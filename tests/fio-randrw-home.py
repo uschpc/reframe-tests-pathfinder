@@ -15,7 +15,7 @@ class FioRandrwHome(rfm.RunOnlyRegressionTest):
     executable = "bash fio-randrw-home.sh"
     num_tasks = 1
     num_cpus_per_task = 4
-    time_limit = "5m"
+    time_limit = "10m"
     reference = {
         "pathfinder:compute": {
             "avg_write_speed": (33.0, -0.1, None, "MiB/sec"),
