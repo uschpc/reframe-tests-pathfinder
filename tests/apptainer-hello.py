@@ -11,7 +11,7 @@ class ApptainerHello(rfm.RunOnlyRegressionTest):
     valid_prog_environs = [
         "env-apptainer"
     ]
-    sourcesdir = "./src/apptainer"
+    sourcesdir = "./src/apptainer-hello"
     executable = "bash build-and-run.sh"
     num_tasks = 1
     num_cpus_per_task = 1
