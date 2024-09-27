@@ -2,8 +2,8 @@ import reframe as rfm
 import reframe.utility.sanity as sn
 
 @rfm.simple_test
-class ContainerHello(rfm.RunOnlyRegressionTest):
-    descr = "Container hello world"
+class ApptainerHello(rfm.RunOnlyRegressionTest):
+    descr = "Apptainer hello world"
     valid_systems = [
         "pathfinder:compute",
         "pathfinder:gpu"
@@ -11,8 +11,8 @@ class ContainerHello(rfm.RunOnlyRegressionTest):
     valid_prog_environs = [
         "env-apptainer"
     ]
-    sourcesdir = None
-    executable = "apptainer exec /apps/containers/ood/desktop/rocky8-xfce-desktop-ood3.sif echo \"Hello world\""
+    sourcesdir = "./src/apptainer"
+    executable = "bash build-and-run.sh"
     num_tasks = 1
     num_cpus_per_task = 1
     time_limit = "5m"
