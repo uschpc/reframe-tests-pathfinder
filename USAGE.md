@@ -116,9 +116,9 @@ cd /home/hpcroot/rfm
 # Test every node using file download test
 ./reframe-4.6.3/bin/reframe -C ./reframe-tests-pathfinder/config/pathfinder.py -c ./reframe-tests-pathfinder/tests/file-download.py --distribute=all -r
 
-# Test every node using container test
-./reframe-4.6.3/bin/reframe -C ./reframe-tests-pathfinder/config/pathfinder.py -c ./reframe-tests-pathfinder/tests/container-hello.py --distribute=all -r
+# Test every node using Apptainer test
+./reframe-4.6.3/bin/reframe -C ./reframe-tests-pathfinder/config/pathfinder.py -c ./reframe-tests-pathfinder/tests/apptainer-hello.py --distribute=all -r
 
-# Test GPU access for every node in gpu partition
-./reframe-4.6.3/bin/reframe -C ./reframe-tests-pathfinder/config/pathfinder.py -c ./reframe-tests-pathfinder/tests/container-gpu-hello.py --distribute=all -r
+# Test GPU access for every node in gpu partition using Apptainer test
+./reframe-4.6.3/bin/reframe -C ./reframe-tests-pathfinder/config/pathfinder.py -c ./reframe-tests-pathfinder/tests/apptainer-gpu-hello.py --distribute=all -r
 ```
